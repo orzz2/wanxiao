@@ -3,7 +3,7 @@ from campus import CampusCard
 
 def main():
   #sectets字段录入
-  users = input()
+  #users = input()
   
   #数据检测
   print(users) 
