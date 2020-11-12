@@ -29,5 +29,5 @@ jobs:
     - name: AutoCheck
       run: |
         python3 main.py <<EOF
-        ${{secrets.USERS}}
+        ${{secrets.users}}
         EOF
