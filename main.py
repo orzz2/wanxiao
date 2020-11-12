@@ -3,6 +3,7 @@ from campus import CampusCard
 
 def main():
     #sectets字段录入
+    phone,ownphone,password, sckey ,username,text,stuno,userid,areastr,customerid,deptid,mergencypeoplephone,emergencycontact= [], [], [], [], [], [], [], [], [], [], [], [], []
 
     
     while True:
