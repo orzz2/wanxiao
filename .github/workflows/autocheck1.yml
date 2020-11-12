@@ -4,9 +4,6 @@
 name: AutoCheck
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
   schedule:
     - cron: 0 22,13 * * *
     - cron: 30 4 * * *
