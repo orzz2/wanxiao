@@ -6,11 +6,9 @@ def main():
 
     
     #变变变
-    print("start") 
-    print(users) 
     users = input()
     print(users) 
-    print("eend") 
+
     #定义变量
     success,failure=[],[]
     #sectets字段录入
