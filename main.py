@@ -5,53 +5,25 @@ def main():
     #sectets字段录入
 
     
-    #变变变
-    users = input()
-    print(users) 
-
-    #定义变量
-    success,failure=[],[]
-    #sectets字段录入
-    phone, password, sckey = [], [], []
-    #多人循环录入
-    # while True:  
-    #     try:
-    #
-    #         users = input()
-    #         info = users.split(',')
-    #         phone.append(info[0])
-    #         password.append(info[1])
-    #         sckey.append(info[2])
-    #
-    #     except:
-    #         break
-    
-    
-    #数据检测
-    print(AREASTR) 
-    print(CUSTOMERID) 
-    print(DEPTID) 
-    print(EMERGENCYCONTACT) 
-    print(MERGENCYPEOPLEPHONE)
-    print(OWNPHONE)
-    print(PHONENUM)
-    print(SCKEY)
-    print(STUNO)
-    print(TEXT)
-    print(USERID)
-    print(USERS)
-    print(USERNAME)
-    #users="账号,密码,s酱"
-    #users = input()
-    print(users)
-    info = users.split(',')
-    #print(info)
-    phone.append(info[0])
-    print(phone[0])
-    password.append(info[1])
-    print(password[0])
-    sckey.append(info[2])
-    print(sckey[0])
+    while True:
+        try:
+            users = input()
+            info = users.split(',')
+            phone.append(info[0])
+            ownphone.append(info[0])
+            password.append(info[1])
+            sckey.append(info[2])
+            username.append(info[3])
+            text.append(info[4])
+            stuno.append(info[5])
+            userid.append(info[6])
+            areastr.append(info[7])
+            customerid.append(info[8])
+            deptid.append(info[9])
+            mergencypeoplephone.append(info[10])
+            emergencycontact.append(info[11])
+        except:
+            break
 
 
     #提交打卡
@@ -125,7 +97,7 @@ def getUserJson(userInfo,token):
                 "deptid": deptid,
                 "text": text
             },
-            "phonenum": phonenum,
+            "phonenum": ownphone,
             "stuNo": stuno,
             "templateid": "pneumonia",
             "upTime": "null",
