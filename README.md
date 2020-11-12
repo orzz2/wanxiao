@@ -1,1 +1,1 @@
-Star
+Don't Star
