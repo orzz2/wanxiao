@@ -1,0 +1,43 @@
+# This workflows will upload a Python Package using Twine when a release is created
+# For more information see: https://help.github.com/en/actions/language-and-framework-guides/using-python-with-github-actions#publishing-to-package-registries
+
+name: AutoCheck
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    - cron: 0 22,13 * * *
+    - cron: 30 4 * * *
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 'Checkout codes'
+      uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Install dependencies
+      run: |
+        pip3 install requests
+    - name: 'Install requirements'
+      run: |
+        pip install -r requirements.txt
+        
+    - name: Build and publish
+      env:
+        users: ${{ secrets.users }}
+
+    - name: AutoCheck
+      run: |
+        python -m pip install --upgrade pip
+        python3 main.py 
+
+
+      
